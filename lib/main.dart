@@ -10,20 +10,20 @@ extension BuildContextExtension on BuildContext {
 }
 
 class AppThemeData {
-  final Color colorAppBackground = Colors.blueGrey[800];
-  final Color colorAppBar = Colors.blueGrey[800];
-  final Color colorAppBarText = Colors.white;
-  final Color colorDisplayMat = Colors.grey[100];
-  final Color colorMat = Colors.blueGrey[800];
-  final Color colorMatText = Colors.white;
-  final Color colorMatButton = Colors.blue[600];
-  final Color colorMatButtonText = Colors.white;
+  final List<Color> colorAppBackground = [Colors.blueGrey[800], Colors.green[900]];
+  final List<Color> colorAppBar = [Colors.blueGrey[800], Colors.green[900]];
+  final List<Color> colorAppBarText = [Colors.white, Colors.white];
+  final List<Color> colorDisplayMat = [Colors.grey[100], Colors.grey[100]];
+  final List<Color> colorMat = [Colors.blueGrey[800], Colors.green[900]];
+  final List<Color> colorMatText = [Colors.white, Colors.white];
+  final List<Color> colorMatButton = [Colors.blue[600], Colors.green[600]];
+  final List<Color> colorMatButtonText = [Colors.white, Colors.white];
 
   ThemeData get materialTheme {
     return ThemeData(
-      primaryColor: colorAppBar,
-      backgroundColor: colorAppBackground,
-      scaffoldBackgroundColor: colorAppBackground,
+      primaryColor: colorAppBar[0],
+      backgroundColor: colorAppBackground[0],
+      scaffoldBackgroundColor: colorAppBackground[0],
     );
   }
 }
